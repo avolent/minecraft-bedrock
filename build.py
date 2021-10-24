@@ -1,23 +1,26 @@
 #! /usr/bin/python
 import os
+import sys
 #Global Variables
-SERVER_NAME = "test"
-GAMEMODE = ""
-DIFFICULTY = ""
-LEVEL_NAME = ""
-ALLOW_CHEATS = ""
-MAX_PLAYERS = ""
-MAX_THREADS = "0"
+argv = " ".join(sys.argv).split(", ")
+SERVER_NAME = argv[1]
+GAMEMODE = argv[2]
+DIFFICULTY = argv[3]
+LEVEL_NAME = argv[4]
+ALLOW_CHEATS = argv[5]
+MAX_PLAYERS = argv[6]
+MAX_THREADS = argv[7]
 
-print("Downloading Minecraft Bedrock Server")
+print("\nDownloading Minecraft Bedrock Server")
 # Download - https://minecraft.azureedge.net/bin-linux/bedrock-server-1.17.40.06.zip
 os.system("wget https://minecraft.azureedge.net/bin-linux/bedrock-server-1.17.40.06.zip")
 
-print("Unzipping and clean up")
+print("\nUnzipping and clean up")
 os.system("unzip bedrock-server-1.17.40.06.zip && rm bedrock-server-1.17.40.06.zip")
 
-print("Server Configuration")
+print("\nSetting server config to the following")
+print(argv)
 
-print("Starting Server")
-print(SERVER_NAME)
+print("\nStarting Server")
+
 os.system("./bedrock_server")
