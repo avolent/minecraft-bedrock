@@ -21,7 +21,7 @@ print("\nDownloading Minecraft Bedrock Server")
 os.system("wget https://minecraft.azureedge.net/bin-linux/bedrock-server-" + VERSION + ".zip")
 
 print("\nUnzipping and clean up")
-os.system("unzip bedrock-server-1.17.40.06.zip && rm bedrock-server-" + VERSION + ".zip")
+os.system("unzip bedrock-server-" + VERSION + ".zip" "&& rm bedrock-server-" + VERSION + ".zip")
 
 print("\nSetting server config to the following")
 for key, value in properties.items():

@@ -1,13 +1,13 @@
 FROM debian
 # Create the data volume for the container
 ENV VERSION="1.17.40.06" \
-    SERVER_NAME="Test" \ 
+    SERVER_NAME="Dedicated Server" \ 
     GAMEMODE="survival" \
     DIFFICULTY="easy" \
-    LEVEL_NAME="My World" \
+    LEVEL_NAME="Bedrock level" \
     LEVEL_SEED="" \
     ALLOW_CHEATS="false" \
-    MAX_PLAYERS="5" \
+    MAX_PLAYERS="10" \
     MAX_THREADS="0"
 # Add Data volume for docker
 VOLUME ["/data"]
