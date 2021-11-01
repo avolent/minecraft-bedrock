@@ -8,7 +8,7 @@ The following variables can be used to adjust server settings
 eg `docker run -it -p 19132:19132/udp -e MAX_PLAYERS=1 -e SERVER_NAME="Dedicated" minecraft-bedrock`
 
 VERSION="1.17.40.06"
-SERVER_NAME="Test" 
+SERVER_NAME="Test"
 GAMEMODE="survival"
 DIFFICULTY="easy"
 LEVEL_NAME="My World"

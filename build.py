@@ -1,7 +1,6 @@
 #! /usr/bin/python
 import os
 import sys
-import subprocess
 #Global Variables
 argv = " ".join(sys.argv).split(", ")
 VERSION = argv[1]
@@ -25,10 +24,7 @@ os.system("unzip bedrock-server-" + VERSION + ".zip" "&& rm bedrock-server-" + V
 
 print("\nSetting server config to the following")
 for key, value in properties.items():
-    print(key)
-    print(value)
     os.system("sed -i 's/" + key + "=.*/" + key + "=" + value + "/' server.properties")
 
 print("\nStarting Server")
-os.system("cat server.properties")
 os.system("./bedrock_server")
